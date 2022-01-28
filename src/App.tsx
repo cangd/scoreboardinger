@@ -1,23 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import './App.css';
+import Foo from './Foo';
+import theme from './theme'
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Stack spacing={2} direction="row">
+        <div> <TextField id="outlined-basic" label="Tean 1" variant="outlined"/>
+          <Foo></Foo>
+        </div>
+        <div> <TextField id="outlined-basic" label="Tean 2" variant="outlined"/>
+          <Foo></Foo>
+        </div>
+          {/* <Button variant="text">Text</Button>
+          <Button variant="contained">Contained</Button>
+          <Button variant="outlined">Bla</Button> */}
+        </Stack>
+
       </header>
     </div>
   );
